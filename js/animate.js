@@ -16,4 +16,9 @@ $(document).ready(function () {
         }, 1000);
     });
 
+    // section pride
+    $('.pride__items').each(function () {
+        $(this).append($(this).html());
+    });
+
 });

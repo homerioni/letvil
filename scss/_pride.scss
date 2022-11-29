@@ -17,8 +17,8 @@
       display: flex;
       justify-content: center;
       &:first-child {
-         margin-left: -13rem;
-         margin-right: -13rem;
+         //margin-left: -13rem;
+         //margin-right: -13rem;
       }
       &:not(:last-child) {
          margin-bottom: 1.8rem;
@@ -27,13 +27,14 @@
    &__item {
       width: 22rem;
       height: 22rem;
+      margin-right: 6rem;
       background: #E2E9E9;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       &:not(:last-child) {
-         margin-right: 6rem;
+         //margin-right: 6rem;
       }
       & img {
          width: 13rem;
