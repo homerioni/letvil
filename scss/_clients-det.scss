@@ -1,0 +1,106 @@
+.clients-det {
+   padding-top: 19.3rem;
+   margin-bottom: 14.1rem;
+   position: relative;
+   &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 40.7rem;
+      background: linear-gradient(180deg, #DDE2E2 2.74%, rgba(203, 207, 205, 0) 100%);
+      z-index: -1;
+   }
+   &__bc {
+      margin-bottom: 6rem;
+   }
+   &__title {
+      margin-bottom: 3.5rem;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__main {
+      width: 65.2%;
+      height: fit-content;
+      &>p {
+         line-height: 150%;
+         margin-bottom: 2.9rem;
+         &>span {
+            color: $green;
+         }
+      }
+      &>h3 {
+         font-weight: 700;
+         font-size: 2.2rem;
+         line-height: 145%;
+         margin-bottom: 1.5rem;
+      }
+   }
+   &__add {
+      width: 28.3%;
+      height: fit-content;
+      position: relative;
+      background: #7DCD61;
+      border-radius: 3rem;
+      padding: 5.9rem 7rem 0 5.9rem;
+      text-align: center;
+      &-title {
+         font-weight: 700;
+         font-size: 2.2rem;
+         line-height: 100%;
+         color: $white;
+         margin-bottom: 4.3rem;
+      }
+      &-text {
+         line-height: 135%;
+         color: $white;
+         width: 90%;
+         margin: 0 auto;
+         margin-bottom: 1.7rem;
+      }
+      &-img {
+         margin: 0 auto;
+         width: 28.9rem;
+         height: 34.15rem;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      &-btn {
+         position: absolute;
+         bottom: -6.3rem;
+         left: 50%;
+         transform: translateX(-50%);
+         font-weight: 700;
+         font-size: 1.4rem;
+         line-height: 150%;
+         text-transform: uppercase;
+         display: inline-block;
+         &::after {
+            position: absolute;
+            content: '';
+            left: 50%;
+            transform: translateX(-50%);
+            top: -7.7rem;
+            width: 6.6rem;
+            height: 6.6rem;
+            border-radius: 50%;
+            background: #FFFFFF;
+            box-shadow: 0.6rem 1rem 2.5rem rgba(0, 0, 0, 0.05);
+            background-image: url(../img/icon/arrow-green.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+         }
+      }
+   }
+}

@@ -1,0 +1,117 @@
+.forms {
+   margin-bottom: 16rem;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+   }
+   &__imgs {
+      margin-left: 2.9rem;
+   }
+   &__img1 {
+      position: absolute;
+      left: -0.7rem;
+      top: -1.8rem;
+      width: 14.8rem;
+      height: 14.8rem;
+      & img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   &__img2 {
+      width: 80.2rem;
+      height: 53.5rem;
+      margin-top: 1rem;
+      & img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   &__content {
+      width: 48.4%;
+      margin-top: 5.8rem;
+      &-title {
+         margin-bottom: 5.4rem;
+         width: 72%;
+         & span {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 156%;
+            color: $grey;
+            display: inline-block;
+            width: 50%;
+            margin-left: 2rem;
+         }
+      }
+      &-form {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         &>label {
+            width: 48%;
+            height: 6rem;
+            background: #E2E9E9;
+            border-radius: 1.1rem;
+            padding-left: 3rem;
+            margin-bottom: 2.4rem;
+            display: flex;
+            align-items: center;
+            &:nth-child(3) {
+               width: 100%;
+            }
+            &>input {
+               border: none;
+               outline: none;
+               background-color: transparent;
+               width: 90%;
+               font-weight: 700;
+               font-size: 1.4rem;
+               line-height: 157%;
+               text-transform: uppercase;
+               color: $fzAll;
+               &::placeholder {
+                  font-weight: 700;
+                  font-size: 1.4rem;
+                  line-height: 157%;
+                  text-transform: uppercase;
+                  color: $fzAll;
+               }
+               &:focus::placeholder {
+                  opacity: 0;
+                  transition: ease 0.3s;
+               }
+            }
+            &>textarea {
+               border: none;
+               outline: none;
+               background-color: transparent;
+               width: 95%;
+               font-weight: 700;
+               font-size: 1.4rem;
+               line-height: 157%;
+               text-transform: uppercase;
+               color: $fzAll;
+               height: 2.2rem;
+               resize: none;
+               &::placeholder {
+                  font-weight: 700;
+                  font-size: 1.4rem;
+                  line-height: 157%;
+                  text-transform: uppercase;
+                  color: $fzAll;
+               }
+               &:focus::placeholder {
+                  opacity: 0;
+                  transition: ease 0.3s;
+               }
+            }
+         }
+         &>button {
+            margin-top: 2.8rem;
+         }
+      }
+   }
+}

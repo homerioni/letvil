@@ -1,0 +1,127 @@
+.news {
+   padding-top: 19.3rem;
+   margin-bottom: 16.6rem;
+   position: relative;
+   &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 40.7rem;
+      background: linear-gradient(180deg, #DDE2E2 2.74%, rgba(203, 207, 205, 0) 100%);
+      z-index: -1;
+   }
+   &__bc {
+      margin-bottom: 6rem;
+   }
+   &__title {
+      margin-bottom: 6.5rem;
+      text-align: center;
+   }
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+   }
+   &__item {
+      position: relative;
+      height: 48.6rem;
+      width: 30.28%;
+      margin-right: 7.4rem;
+      margin-bottom: 7.4rem;
+      border-radius: 3.5rem;
+      &:nth-child(3n+3) {
+         margin-right: 0;
+      }
+      & img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 3.5rem;
+      }
+      &-data {
+         line-height: 150%;
+         color: $white;
+         padding: 0.5rem 1.4rem 0.4rem 1.6rem;
+         background: $green;
+         box-shadow: 0.6rem 1rem 3rem rgba(0, 0, 0, 0.05);
+         border-radius: 100rem;
+         width: fit-content;
+         position: absolute;
+         left: 2.8rem;
+         top: 3.4rem;
+      }
+      &-content {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         height: 16.1rem;
+         padding: 3rem 3rem 3.5rem 3.7rem;
+         border-radius: 0 0 3.5rem 3.5rem;
+         z-index: 2;
+         &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10rem);
+            z-index: -1;
+            border-radius: 0 0 3.5rem 3.5rem;
+         }
+         &-name {
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 145%;
+            color: $white;
+         }
+         &-text {
+            line-height: 150%;
+            color: $white;
+         }
+      }
+   }
+   &__btn {
+      width: fit-content;
+      margin: 0 auto;
+      display: block;
+      padding: 2.2rem 4rem 2.1rem 4rem;
+   }
+
+   &__nd {
+      padding-top: 0;
+      margin-bottom: 9.5rem;
+      &::after {
+         content: none;
+      }
+      .news {
+         &__inner {
+            position: relative;
+         }
+         &__btn-next {
+            top: 1.7rem;
+            right: 1.5rem;
+         }
+         &__btn-prev {
+            left: unset;
+            top: 4rem;
+            right: 8.5rem;
+         }
+         &__btn-slash {
+            right: 5rem;
+            top: 0rem;
+         }
+         &__swiper-pagination {
+            top: 1.5rem;
+            right: 20.5rem;
+         }
+         &__title {
+            text-align: left;
+            margin-bottom: 6.3rem;
+         }
+      }
+   }
+}

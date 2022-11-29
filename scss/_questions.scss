@@ -1,0 +1,138 @@
+.questions {
+   margin-bottom: 19rem;
+   position: relative;
+   &__inner {
+      position: relative;
+      overflow: hidden;
+      &::after {
+         position: absolute;
+         content: '';
+         right: 0rem;
+         top: 0rem;
+         width: 67.5rem;
+         height: 61.5rem;
+         background-image: url(../img/questions0.svg);
+         background-position: center;
+         background-size: contain;
+         background-repeat: no-repeat;
+         border-radius: 0 3rem 0 0;
+      }
+   }
+   &__info {
+      position: absolute;
+      right: 10.5rem;
+      top: 22.5rem;
+      z-index: 5;
+      &-title {
+         margin-bottom: 3.1rem;
+         color: $white;
+      }
+      &-btn {
+         display: inline-block;
+         line-height: 150%;
+         text-transform: uppercase;
+         color: #6CBD50;
+         padding: 2.2rem 4rem 2.1rem 4rem;
+         background-color: $white;
+         border-radius: 100rem;
+         margin-left: 0.6rem;
+      }
+   }
+   & ul {
+      counter-reset: list 0;
+      border-radius: 3rem;
+      & li {
+         position: relative;
+         list-style-type: none;
+         padding: 0 84rem 0 14rem;
+         &:first-child {
+            border-radius: 3rem 3rem 0 0;
+            background-color: #EFF1F3;
+            padding-top: 5.1rem;
+            &::before {
+               top: 8.5rem;
+            }
+         }
+         &:last-child {
+            border-radius: 0 0 3rem 3rem;
+         }
+         &:nth-child(odd) {
+            background-color: #F3F3F7;
+         }
+         &:nth-child(even) {
+            background-color: #E2E9E9;
+         }
+         &.active {
+            &::before {
+               opacity: 0;
+            }
+         }
+      }
+      &>li::before {
+         counter-increment: list;
+         content: counter(list);
+         position: absolute;
+         left: 9.7rem;
+         top: 3.3rem;
+         font-family: 'Circe';
+         font-style: normal;
+         font-weight: 700;
+         font-size: 1.8rem;
+         line-height: 150%;
+         text-transform: uppercase;
+         color: $fzAll;
+         transition: ease 0.3s;
+      }
+      &>li:nth-child(-n+9)::before {
+         content: "0" counter(list);
+      }
+   }
+   &__title {
+      font-weight: 700;
+      font-size: 2.2rem;
+      line-height: 150%;
+      padding: 2.95rem 0 2.95rem 0;
+      position: relative;
+      transition: ease 0.3s;
+      cursor: pointer;
+      padding-right: 5rem;
+      &::after {
+         position: absolute;
+         content: '';
+         right: 0rem;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 2.8rem;
+         height: 2rem;
+         background-image: url(../img/icon/arrow-slider.svg);
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center;
+         transition: ease 0.3s;
+      }
+      &.active {
+         font-weight: 700;
+         font-size: 4.5rem;
+         line-height: 104%;
+         padding-top: 5rem;
+         &::after {
+            transform: translateY(-50%) rotate(90deg);
+         }
+      }
+   }
+   &__text {
+      display: none;
+      padding-bottom: 5rem;
+      margin-top: -1rem;
+      &>p {
+         line-height: 150%;
+         &:not(:last-child) {
+            margin-bottom: 4.3rem;
+         }
+      }
+      &.active {
+         display: block;
+      }
+      
+   }
+}

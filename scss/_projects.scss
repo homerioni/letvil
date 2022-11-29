@@ -1,0 +1,269 @@
+.projects {
+   margin-bottom: 26.7rem;
+   &__inner {
+      position: relative;
+   }
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6.8rem;
+      &-left {
+         width: 16%;
+      }
+      &-center {
+         width: 57.2%;
+         display: flex;
+         &-btn {
+            cursor: pointer;
+            &-icon {
+               width: 10.2rem;
+               height: 10.2rem;
+               border-radius: 50%;
+               background-color: #E2E9E9;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin-bottom: 0.9rem;
+               & img {
+                  width: 60%;
+                  height: 55%;
+                  mix-blend-mode: multiply;
+               }
+            }
+            &-name {
+               text-align: center;
+               font-weight: 700;
+               font-size: 1.4rem;
+               line-height: 193%;
+               letter-spacing: 0.05em;
+               text-transform: uppercase;
+               color: $grey;
+            }
+            &:not(:last-child) {
+               margin-right: 6rem;
+            }
+            &.active {
+               & .projects__header-center-btn-icon {
+                  background-color: #F3D949;
+               }
+            }
+         }
+      }
+      &-right {
+         width: 12%;
+         &-info {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-bottom: 2.7rem;
+            margin-bottom: 3.2rem;
+            font-weight: 700;
+            font-size: 4.5rem;
+            line-height: 104%;
+            &::after {
+               position: absolute;
+               content: '';
+               left: 0;
+               bottom: 0;
+               width: 100%;
+               height: 1.2px;
+               background-color: #D2DADA;
+            }
+            &>span {
+               margin-left: 1.3rem;
+               font-weight: 400;
+               font-size: 1.8rem;
+               line-height: 150%;
+               color: $grey;
+               width: 35%;
+               margin-top: -1rem;
+            }
+         }
+         &-link {
+            padding-right: 9rem;
+         }
+      }
+   }
+   &__slider {
+      width: 100%;
+   }
+   &__swiper {
+      padding-bottom: 6rem;
+      width: 100%;
+      padding-right: 2%;
+   }
+   &__slide {
+      height: 48.6rem;
+      border-radius: 3.5rem;
+      position: relative;
+      display: flex;
+      &-img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         border-radius: 3.5rem;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3.5rem;
+         }
+      }
+      &-content {
+         margin-top: auto;
+         position: relative;
+         padding: 3.8rem 4rem 3.2rem 2.9rem;
+         width: 100%;
+         &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100.1%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(200px);
+            border-radius: 0 0 3.5rem 3rem;
+            z-index: 1;
+         }
+         &-icon {
+            position: absolute;
+            right: 2.8rem;
+            top: -2.8rem;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+            background-color: $white;
+            border-radius: 100rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            & img {
+               width: 55%;
+               height: 50%;
+            }
+         }
+         &-title {
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 145%;
+            color: $white;
+            position: relative;
+            z-index: 5;
+         }
+         &-text {
+            color: $white;
+            position: relative;
+            z-index: 5;
+            line-height: 150%;
+         }
+         &-link {
+            position: absolute;
+            right: -3.2rem;
+            bottom: -1.8rem;
+            padding: 2.3rem 3.6rem 2rem 3.6rem;
+            background-color: $white;
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 150%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #9BA8A8;
+            box-shadow: 0.6rem 1rem 4.4rem rgba(0, 0, 0, 0.05);
+            border-radius: 100rem;
+            z-index: 5;
+         }
+       
+      }
+   }
+   &__btn-next {
+      top: unset;
+      right: unset;
+      bottom: -4.3rem;
+      left: 19rem;
+   }
+   &__btn-prev {
+      top: unset;
+      bottom: -6.5rem;
+      left: 12rem;
+   }
+   &__btn-slash {
+      bottom: -2.2rem;
+      left: 15.3rem;
+   }
+   &__swiper-pagination {
+      bottom: -3.8rem;
+      left: -0.2rem;
+   }
+   &__swiper-bullet {
+      right: 0;
+      bottom: -6.5rem;
+   }
+
+   &__project {
+      padding-top: 19.2rem;
+      margin-bottom: 14.9rem;
+      position: relative;
+      &::after {
+         position: absolute;
+         content: '';
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 40.7rem;
+         background: linear-gradient(180deg, #DDE2E2 2.74%, rgba(203, 207, 205, 0) 100%);
+         z-index: -1;
+      }
+      .projects {
+         &__bc {
+            margin-bottom: 6rem;
+         }
+         &__header {
+            margin-bottom: 6.8rem;
+            display: block;
+            &-left {
+               text-align: center;
+               margin-bottom: 6.5rem;
+               width: auto;
+            }
+            &-center {
+               width: auto;
+               justify-content: center;
+            }
+         }
+         &__items {
+            display: flex;
+            flex-wrap: wrap;
+         }
+         &__slide {
+            width: 20.23%;
+            margin-right: 9.3rem;
+            margin-bottom: 7.6rem;
+            &:nth-child(4n+4) {
+               margin-right: 0;
+            }
+            &-content {
+            }
+         }
+      }
+   }
+}
+
+@media (min-width: 47.99em) {
+   .projects {
+      &__slide {
+         &-content {
+            &-link {
+               transition: ease 0.3s;
+               &:hover {
+                  background-color: $green;
+                  color: $white;
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,54 @@
+.info {
+   margin-bottom: 29.1rem;
+   padding-top: 19.2rem;
+   position: relative;
+   &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 40.7rem;
+      background: linear-gradient(180deg, #DDE2E2 2.74%, rgba(203, 207, 205, 0) 100%);
+      z-index: -1;
+   }
+   &__bc {
+      margin-bottom: 1.2rem;
+   }
+   &__inner {
+      position: relative;
+   }
+   &__content {
+      padding-top: 10.2rem;
+      width: 45%;
+      &-title {
+         margin-bottom: 3rem;
+      }
+      &-btn {
+         display: inline-block;
+      }
+   }
+   &__img {
+      position: absolute;
+      top: 0;
+      right: 10rem;
+      width: 48rem;
+      height: 64rem;
+      & img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      &::after {
+         position: absolute;
+         content: '';
+         right: -10rem;
+         top: 0rem;
+         height: 43.9rem;
+         width: 68.3rem;
+         background: $green;
+         border-radius: 100rem;
+         z-index: -1;
+      }
+   }
+}

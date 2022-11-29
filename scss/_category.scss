@@ -1,0 +1,201 @@
+.category {
+   margin-bottom: 30rem;
+   &__inner {
+      position: relative;
+   }
+   &__title {
+      margin-bottom: 6.1rem;
+   }
+   &__slider {
+
+   }
+   &__slide {
+      height: 26.6rem;
+      position: relative;
+      padding: 4rem 6.7rem 3.5rem 4.5rem;
+      display: flex;
+      justify-content: space-between;
+      &::after {
+         position: absolute;
+         content: '';
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-image: url(../img/category-bg.svg);
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         z-index: -1;
+         transition: ease 0.4s;
+      }
+      &-img {
+         left: 50%;
+         bottom: 3rem;
+         transform: translateX(-50%);
+         position: absolute;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      &-img1 {
+         width: 14.9rem;
+         height: 18.9rem;
+      }
+      &-img2 {
+         width: 30.6rem;
+         height: 13.5rem;
+      }
+      &-img3 {
+         width: 20.4rem;
+         height: 14.8rem;
+      }
+      &-name {
+         width: 15.5rem;
+         font-weight: 700;
+         font-size: 2.2rem;
+         line-height: 145%;
+         position: relative;
+         transition: ease 0.4s;
+         z-index: 5;
+         &::after {
+            position: absolute;
+            content: '';
+            left: 0rem;
+            top: 7.1rem;
+            width: 2.7rem;
+            height: 2rem;
+            background-image: url(../img/icon/arrow-slider.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            transition: ease 0.4s;
+         }
+      }
+      &-cost {
+         height: 11.2rem;
+         padding: 0 1.6rem;
+         width: fit-content;
+         background: $white;
+         box-shadow: 0.6rem 1rem 2.5rem rgba(0, 0, 0, 0.05);
+         border-radius: 100rem;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         margin-top: auto;
+         position: relative;
+         z-index: 5;
+         &-add {
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 143%;
+            text-align: center;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.3rem;
+         }
+         &-num {
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 91%;
+            text-transform: uppercase;
+            color: $green;
+            display: flex;
+            align-items: flex-start;
+            &>span {
+               margin-left: 0.1rem;
+               font-size: 1.1rem;
+               line-height: 91%;
+            }
+         }
+      }
+      &-num {
+         position: absolute;
+         right: 2.5rem;
+         top: 2.1rem;
+         font-weight: 700;
+         font-size: 1.8rem;
+         line-height: 150%;
+         text-transform: lowercase;
+         color: $grey;
+         transition: ease 0.3s;
+      }
+   }
+   &__btn-next {
+      top: unset;
+      right: unset;
+      bottom: -9.1rem;
+      left: 19rem;
+   }
+   &__btn-prev {
+      top: unset;
+      bottom: -11.3rem;
+      left: 12rem;
+   }
+   &__btn-slash {
+      bottom: -7.2rem;
+      left: 15.3rem;
+   }
+   &__swiper-pagination {
+      bottom: -8.8rem;
+      left: -0.2rem;
+   }
+   &__swiper-bullet {
+      right: 0;
+      bottom: -11.2rem;
+   }
+
+   &__cc {
+      padding-top: 19.2rem;
+      margin-bottom: 13rem;
+      position: relative;
+      &::after {
+         position: absolute;
+         content: '';
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 40.7rem;
+         background: linear-gradient(180deg, #DDE2E2 2.74%, rgba(203, 207, 205, 0) 100%);
+         z-index: -1;
+      }
+      .category {
+         &__bc {
+            margin-bottom: 10rem;
+         }
+         &__slider {
+            display: flex;
+            flex-wrap: wrap;
+         }
+         &__slide {
+            width: 30.84%;
+            margin-right: 6rem;
+            margin-bottom: 6.2rem;
+            &:nth-child(3n+3) {
+               margin-right: 0;
+            }
+         }
+      }
+   }
+}
+
+@media (min-width: 47.99em) {
+   .category {
+      &__slide {
+         &:hover::after {
+            background-image: url(../img/category-bg2.svg);
+         }
+         &:hover .category__slide-name {
+            color: $white;
+            &::after {
+               background-image: url(../img/icon/arrow-white.svg);
+            }
+         }
+         &:hover .category__slide-num {
+            color: $white;
+         }
+      }
+   }
+}

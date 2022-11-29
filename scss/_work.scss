@@ -1,0 +1,116 @@
+.work {
+   margin-bottom: 19rem;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+   }
+   &__content {
+      width: 31%;
+      margin-top: 1.9rem;
+      &-title {
+         margin-bottom: 1.4rem;
+      }
+      &-text {
+         line-height: 150%;
+         color: $grey;
+         width: 65%;
+      }
+   }
+   &__swiper {
+      width: 65.5%;
+      padding-top: 1.8rem;
+      margin: 0;
+   }
+   &__slide {
+      border-radius: 3rem 3rem 0 3rem;
+      background-color: $green;
+      position: relative;
+      padding: 4.5rem 5.2rem 4.6rem 3.6rem;
+      &-decoration {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         right: -5.5rem;
+         width: 5.5rem;
+         border: 1px dashed #9BA8A8;
+         &::after {
+            position: absolute;
+            content: '';
+            left: -0.1rem;
+            top: 50%;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            background: $green;
+            border: 0.25rem solid $white;
+         }
+         &::before{
+            position: absolute;
+            content: '';
+            right: -0.15rem;
+            top: 50%;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            background: $green;
+            border: 0.25rem solid $white;
+         }
+      }
+      &-num {
+         width: 6.8rem;
+         height: 3.6rem;
+         background-color: $white;
+         border-radius: 10rem;
+         font-weight: 700;
+         line-height: 150%;
+         color: $grey;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: absolute;
+         right: 3.3rem;
+         top: -1.8rem;
+      }
+      &-icon {
+         width: 3.8rem;
+         height: 3.8rem;
+         margin-bottom: 4.2rem;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+         }
+      }
+      &-name {
+         font-weight: 700;
+         font-size: 2.2rem;
+         line-height: 145%;
+         color: $white;
+         margin-bottom: 1.7rem;
+      }
+      &-text {
+         line-height: 150%;
+         color: $white;
+      }
+   }
+   &__btn-next {
+      bottom: -7rem;
+      right: unset;
+      left: 18.5rem;
+   }
+   &__btn-prev {
+      bottom: -11.5rem;
+      left: 11.5rem;
+   }
+   &__swiper-pagination {
+      bottom: 4.8rem;
+      left: 0;
+   }
+   &__btn-slash {
+      bottom: 6rem;
+      left: 15rem;
+   }
+}

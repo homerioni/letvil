@@ -1,0 +1,132 @@
+.certificates {
+   padding-bottom: 21.3rem;
+   position: relative;
+   &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 31.8rem;
+      background-color: $green;
+   }
+   &__inner {
+      position: relative;
+   }
+   &__title {
+      margin-bottom: 5.5rem;
+   }
+   &__slide {
+      position: relative;
+      &::after {
+         position: absolute;
+         content: '';
+         left: 0;
+         top: 9rem;
+         width: 100%;
+         height: 21.8rem;
+         background-image: url(../img/certificates-bg.png);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         z-index: 1;
+      }
+      &-img {
+         width: 22.6rem;
+         height: 27rem;
+         margin-left: 7.5rem;
+         margin-bottom: 5rem;
+         position: relative;
+         z-index: 2;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      &-content {
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-end;
+         padding: 0rem 3.2rem 3.4rem 3.3rem;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 16.4rem;
+         background: #EDC900;
+         border-radius: 3.5rem;
+         z-index: 4;
+         &-info {
+            width: 60%;
+            &-subtitle {
+               font-weight: 700;
+               font-size: 1.4rem;
+               line-height: 150%;
+               text-transform: uppercase;
+               color: $white;
+               margin-bottom: 0.5rem;
+            }
+            &-name {
+               font-weight: 700;
+               font-size: 2.2rem;
+               line-height: 145%;
+               color: $white;
+            }
+         }
+         &-zoom {
+            width: 3.5rem;
+            height: 3.5rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            & img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+      }
+   }
+   &__btn-next {
+      top: unset;
+      right: unset;
+      bottom: -11.1rem;
+      left: 19rem;
+      &::after {
+         background-image: url(../img/icon/arrow-white.svg);
+      }
+   }
+   &__btn-prev {
+      top: unset;
+      bottom: -13.3rem;
+      left: 12rem;
+      &::after {
+         background-image: url(../img/icon/arrow-white.svg);
+      }
+   }
+   &__btn-slash {
+      bottom: -9.2rem;
+      left: 15.3rem;
+      z-index: 2;
+      &::after {
+         background-color: rgba(255, 255, 255, 0.5);
+      }
+   }
+   &__swiper-pagination {
+      bottom: -10.8rem;
+      left: -0.2rem;
+      & .current {
+         color: $white;
+      }
+   }
+   &__swiper-bullet {
+      bottom: -13.5rem;
+      right: 0;
+      & .swiper-pagination-bullet {
+         background-color: #CAFFB8;
+      }
+      & .swiper-pagination-bullet-active {
+         background-color: $white;
+      }
+   }
+}

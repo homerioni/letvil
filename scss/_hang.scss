@@ -1,0 +1,244 @@
+.hang {
+   margin-bottom: 17.5rem;
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 3rem;
+      margin-bottom: 5.3rem;
+      position: relative;
+      &::after {
+         position: absolute;
+         content: '';
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         height: 1.2px;
+         background-color: #D2DADA;
+      }
+      &-img {
+         width: 15rem;
+         height: 9.7rem;
+         margin-right: -2rem;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+   }
+   &__elements {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5.1rem;
+      &-name {
+         width: 15rem;
+         margin-right: 1.3rem;
+         line-height: 150%;
+         color: $grey;
+      }
+      &-items {
+         display: flex;
+      }
+      &-item {
+         padding: 1.4rem 2.4rem 1.5rem 2.4rem;
+         border: 1px solid #D2DADA;
+         border-radius: 0.8rem;
+         font-weight: 700;
+         font-size: 1.4rem;
+         line-height: 157%;
+         text-transform: uppercase;
+         &:not(:last-child) {
+            margin-right: 1.8rem;
+         }
+      }
+      &-link {
+         margin-left: auto;
+      }
+   }
+   &__items {
+      display: flex;
+   }
+   &__item {
+      width: 22.2%;
+      background: #E2E9E9;
+      border-radius: 3rem;
+      padding: 3.5rem 3.5rem 3.4rem 3.7rem;
+      height: auto;
+      &:not(:last-child) {
+         margin-right: 6rem;
+      }
+      &-num {
+         background: #FFFFFF;
+         box-shadow: 0.6rem 1rem 3rem rgba(0, 0, 0, 0.05);
+         border-radius: 100rem;
+         width: 6.8rem;
+         height: 3.6rem;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: 700;
+         line-height: 100%;
+         text-transform: uppercase;
+         color: $grey;
+         margin-bottom: 4rem;
+         margin-left: -0.2rem;
+      }
+      &-img {
+         width: 29.5rem;
+         height: 20rem;
+         margin: 0 auto;
+         margin-bottom: 3.7rem;
+         & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+         }
+      }
+      &-name {
+         font-weight: 700;
+         font-size: 2.2rem;
+         margin-bottom: 1.7rem;
+         line-height: 145%;
+      }
+      &-text {
+         line-height: 150%;
+      }
+   }
+
+   &__kt {
+      margin-bottom: 20.7rem;
+      .hang {
+         &__inner {
+            position: relative;
+         }
+         &__header {
+            margin-bottom: 6.5rem;
+            padding: 0;
+            &::after {
+               content: none;
+            }
+         }
+         &__item {
+            height: auto;
+            &-img {
+               margin-bottom: 3.7rem;
+            }
+            &-name {
+               margin-bottom: 0;
+               width: 63%;
+            }
+         }
+         &__btn-next {
+            top: 2.4rem;
+            right: 1.5rem;
+         }
+         &__btn-prev {
+            left: unset;
+            top: 4.7rem;
+            right: 8.5rem;
+         }
+         &__btn-slash {
+            right: 5rem;
+            top: 0.5rem;
+         }
+         &__swiper-pagination {
+            top: 2rem;
+            right: 20.4rem;
+         }
+      }
+   }
+
+   &__info {
+      margin-bottom: 14.6rem;
+      .hang {
+         &__items {
+            flex-wrap: wrap;
+         }
+         &__item {
+            width: 22.07%;
+            height: 34.2rem;
+            padding: 3.5rem;
+            background-color: $white;
+            margin-bottom: 6.3rem;
+            margin-right: 6.3rem;
+            transition: ease 0.3s;
+            &:nth-child(4n+4) {
+               margin-right: 0;
+            }
+            &-img {
+               width: 15.8rem;
+               height: 14.8rem;
+               margin-bottom: 3.2rem;
+            }
+            &-num {
+               background-color: $green;
+               color: $white;
+               margin-bottom: 2.6rem;
+               transition: ease 0.3s;
+            }
+            &-name {
+               margin-bottom: 0;
+               transition: ease 0.3s;
+            }
+         }
+      }
+   }
+
+   &__client {
+      padding-top: 19.9rem;
+      margin-bottom: 9.7rem;
+      position: relative;
+      &::after {
+         position: absolute;
+         content: '';
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 40.7rem;
+         background: linear-gradient(180deg, #DDE2E2 2.74%, rgba(203, 207, 205, 0) 100%);
+         z-index: -1;
+      }
+      .hang {
+         &__bc {
+            margin-bottom: 6rem;
+         }
+         &__title {
+            text-align: center;
+            margin-bottom: 6.5rem;
+         }
+      }
+   }
+
+   &__ud {
+      margin-bottom: 20.8rem;
+      .hang {
+         &__item {
+            &-img {
+               margin-bottom: 3.7rem;
+            }
+         }
+      }
+   }
+}
+
+@media (min-width: 47.99em) {
+   .hang {
+      &__info {
+         .hang {
+            &__item {
+               &:hover {
+                  background-color: $green;
+                  .hang__item-num {
+                     background-color: $white;
+                     color: $green;
+                  }
+                  .hang__item-name {
+                     color: $white;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
