@@ -49,7 +49,103 @@
     }
   }
 }
+
+.svg-test {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 7rem;
+}
+
 .header {
+  &__logo-anim {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 4.5rem;
+
+    > img {
+      object-fit: fill;
+      object-position: bottom left;
+
+      &:nth-child(2) {
+        width: 3.6rem;
+        height: 3.1rem;
+        margin-right: 0.5rem;
+        transform-origin: bottom left;
+      }
+
+      &:nth-child(3) {
+        width: 2.3rem;
+        height: 3.6rem;
+        transform-origin: bottom;
+      }
+
+      &:nth-child(4) {
+        width: 3.7rem;
+        height: 3rem;
+        margin-right: 0.4rem;
+      }
+
+      &:nth-child(5) {
+        width: 0.7rem;
+        height: 3rem;
+        margin-right: 0.5rem;
+      }
+
+      &:nth-child(6) {
+        width: 3rem;
+        height: 3.6rem;
+      }
+    }
+  }
+
+  &__logo-letter {
+    position: relative;
+    display: block;
+    margin-right: 0.3rem;
+  }
+
+  &__logo-letter-high {
+    width: 3rem;
+    height: 3.6rem;
+    object-fit: fill;
+    object-position: bottom left;
+  }
+
+  &__logo-letter-min {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3.6rem;
+    height: 3.6rem;
+    opacity: 0;
+  }
+
+  &__logo-circle {
+    position: absolute;
+    right: 3.2rem;
+    top: 0;
+    z-index: -1;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 100%;
+    background-color: #7AC361;
+  }
+
+  .line {
+    position: absolute;
+    left: 15rem;
+    top: 18rem;
+    width: 50rem;
+
+    > input {
+      width: 100%;
+    }
+  }
+
   &__online {
     @include btn-hover;
   }
@@ -332,7 +428,7 @@
 
     &:first-child {
       left: -14.4rem;
-      animation: 79.9s linear infinite infinite-translate;
+      animation: 80.25s linear infinite infinite-translate;
     }
 
     &:last-child {
@@ -369,6 +465,12 @@
     &:hover {
       &:after {
         transform: translate(1.2rem, -50%);
+      }
+    }
+
+    &.active {
+      &:after {
+        transform: translateY(-50%) rotate(90deg);
       }
     }
   }
