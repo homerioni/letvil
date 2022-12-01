@@ -551,3 +551,49 @@
     }
   }
 }
+
+@keyframes img-dot {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.description {
+  &__info-img {
+    position: relative;
+  }
+
+  &__img-dot {
+    position: absolute;
+    left: 3.5rem;
+    top: 7.3rem;
+    display: flex;
+    justify-content: space-between;
+    width: 5.4rem;
+    height: 1.6rem;
+
+    > img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+
+      &:nth-child(1) {
+        animation: 1s img-dot .15s linear infinite;
+      }
+      &:nth-child(2) {
+        animation: 1s img-dot .3s linear infinite;
+      }
+      &:nth-child(3) {
+        animation: 1s img-dot .45s linear infinite;
+      }
+    }
+  }
+}
