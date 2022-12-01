@@ -135,17 +135,6 @@
     background-color: #7AC361;
   }
 
-  .line {
-    position: absolute;
-    left: 15rem;
-    top: 18rem;
-    width: 50rem;
-
-    > input {
-      width: 100%;
-    }
-  }
-
   &__online {
     @include btn-hover;
   }
@@ -349,55 +338,47 @@
 
 @keyframes steps-img-translate {
   from {
-    transform: translate(0, 0);
-  }
-
-  17% {
-    transform: translate(1rem, 0);
-  }
-
-  33% {
-    transform: translate(1.5rem, 1.5rem);
-  }
-
-  50% {
-    transform: translate(0, 1.5rem);
-  }
-
-  67% {
-    transform: translate(-1.5rem, 1.5rem);
-  }
-
-  83% {
-    transform: translate(-1.5rem, 0);
+    transform: translateY(-2rem);
   }
 
   to {
-    transform: translate(0, 0);
+    transform: translateY(2rem);
   }
 }
 
-@keyframes steps-img-rotate {
+@keyframes steps-img-shadow {
   from {
-    transform: rotate(0);
+    transform: translateX(-50%) scale(.8);
+    opacity: .6;
   }
-  33% {
-    transform: rotate(-2deg);
-  }
-  66% {
-    transform: rotate(5deg);
-  }
+
   to {
-    transform: rotate(0);
+    transform: translateX(-50%) scale(1.3);
+    opacity: .9;
   }
 }
 
 .steps {
   &__slide-img {
-    animation: 15s linear infinite steps-img-translate;
+    position: relative;
 
     > img {
-      animation: 9s linear infinite steps-img-rotate;
+      animation: 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite steps-img-translate alternate;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 45%;
+      top: 65%;
+      z-index: -1;
+      width: 20rem;
+      height: 10rem;
+      border-radius: 100%;
+      transform: translateX(-50%);
+      background-color: black;
+      filter: blur(2rem);
+      animation: 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite steps-img-shadow alternate;
     }
   }
 }

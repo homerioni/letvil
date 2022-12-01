@@ -8259,15 +8259,6 @@ input[type=number] {
   border-radius: 100%;
   background-color: #7AC361;
 }
-.header .line {
-  position: absolute;
-  left: 15rem;
-  top: 18rem;
-  width: 50rem;
-}
-.header .line > input {
-  width: 100%;
-}
 .header__online {
   position: relative;
   -webkit-transition: -webkit-transform 0.4s ease;
@@ -8641,108 +8632,72 @@ input[type=number] {
 
 @-webkit-keyframes steps-img-translate {
   from {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  17% {
-    -webkit-transform: translate(1rem, 0);
-            transform: translate(1rem, 0);
-  }
-  33% {
-    -webkit-transform: translate(1.5rem, 1.5rem);
-            transform: translate(1.5rem, 1.5rem);
-  }
-  50% {
-    -webkit-transform: translate(0, 1.5rem);
-            transform: translate(0, 1.5rem);
-  }
-  67% {
-    -webkit-transform: translate(-1.5rem, 1.5rem);
-            transform: translate(-1.5rem, 1.5rem);
-  }
-  83% {
-    -webkit-transform: translate(-1.5rem, 0);
-            transform: translate(-1.5rem, 0);
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
   }
   to {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
   }
 }
 
 @keyframes steps-img-translate {
   from {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  17% {
-    -webkit-transform: translate(1rem, 0);
-            transform: translate(1rem, 0);
-  }
-  33% {
-    -webkit-transform: translate(1.5rem, 1.5rem);
-            transform: translate(1.5rem, 1.5rem);
-  }
-  50% {
-    -webkit-transform: translate(0, 1.5rem);
-            transform: translate(0, 1.5rem);
-  }
-  67% {
-    -webkit-transform: translate(-1.5rem, 1.5rem);
-            transform: translate(-1.5rem, 1.5rem);
-  }
-  83% {
-    -webkit-transform: translate(-1.5rem, 0);
-            transform: translate(-1.5rem, 0);
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
   }
   to {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
   }
 }
-@-webkit-keyframes steps-img-rotate {
+@-webkit-keyframes steps-img-shadow {
   from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  33% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  66% {
-    -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
+    -webkit-transform: translateX(-50%) scale(0.8);
+            transform: translateX(-50%) scale(0.8);
+    opacity: 0.6;
   }
   to {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: translateX(-50%) scale(1.3);
+            transform: translateX(-50%) scale(1.3);
+    opacity: 0.9;
   }
 }
-@keyframes steps-img-rotate {
+@keyframes steps-img-shadow {
   from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  33% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  66% {
-    -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
+    -webkit-transform: translateX(-50%) scale(0.8);
+            transform: translateX(-50%) scale(0.8);
+    opacity: 0.6;
   }
   to {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: translateX(-50%) scale(1.3);
+            transform: translateX(-50%) scale(1.3);
+    opacity: 0.9;
   }
 }
 .steps__slide-img {
-  -webkit-animation: 15s linear infinite steps-img-translate;
-          animation: 15s linear infinite steps-img-translate;
+  position: relative;
 }
 .steps__slide-img > img {
-  -webkit-animation: 9s linear infinite steps-img-rotate;
-          animation: 9s linear infinite steps-img-rotate;
+  -webkit-animation: 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite steps-img-translate alternate;
+          animation: 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite steps-img-translate alternate;
+}
+.steps__slide-img:before {
+  content: "";
+  position: absolute;
+  left: 45%;
+  top: 65%;
+  z-index: -1;
+  width: 20rem;
+  height: 10rem;
+  border-radius: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: black;
+  -webkit-filter: blur(2rem);
+          filter: blur(2rem);
+  -webkit-animation: 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite steps-img-shadow alternate;
+          animation: 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite steps-img-shadow alternate;
 }
 
 @-webkit-keyframes infinite-translate {

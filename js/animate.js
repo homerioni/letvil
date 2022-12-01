@@ -17,7 +17,6 @@ $(document).ready(function () {
     // });
 
     // Anime.js
-    const path = anime.path('.svg-test path');
     const logoAnimation = (function() {
 
         const logoAnimationTL = anime.timeline({
