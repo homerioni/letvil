@@ -22,7 +22,6 @@ $(document).ready(function () {
         const logoAnimationTL = anime.timeline({
             autoplay: false,
             easing: 'easeOutSine',
-            delay: function(el, i) { return i * 100; },
         }).add({
             targets: '.header__logo-anim > img:nth-child(5)',
             easing: 'easeOutSine',
@@ -242,11 +241,6 @@ $(document).ready(function () {
         // logoAnimation.pause();
     });
 
-    var seekProgressEl = document.querySelector('.progress');
-    seekProgressEl.oninput = function() {
-        logoAnimation.seek(logoAnimation.duration * (seekProgressEl.value / 100));
-    };
-
     // section - block
     let formsTimeOut;
     $('.forms__content-form input, .forms__content-form textarea').keypress(function () {
@@ -260,6 +254,14 @@ $(document).ready(function () {
     // section pride
     $('.pride__items').each(function () {
         $(this).append($(this).html());
+    });
+
+    // catalog cards
+    $('.catalog__item-wrap').mousemove(function(e){
+        let target = this.getBoundingClientRect(),
+            x = ((e.clientX - target.left) / $(this).width() - 0.5) * -10,
+            y = ((e.clientY - target.top) / $(this).height() - 0.5) * 10;
+        $('.catalog__item-wrap').css('--mouseY', x + 'deg').css('--mouseX', y + 'deg');
     });
 
 });
