@@ -505,6 +505,49 @@
     }
   }
 
+  &__top-it {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      height: 1px;
+      background-color: #91959B;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform .3s ease;
+    }
+
+    &:hover {
+      &:before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+  }
+
+  &__top-mess-it {
+    transition: transform ease .3s;
+
+    &:hover {
+      transform: translateY(-0.4rem);
+    }
+  }
+
+  &__center-add-contacts a {
+    &:hover {
+      filter: invert(.4);
+    }
+  }
+
   &__bottom-o a {
+    transition: transform ease .3s;
+
+    &:hover {
+      transform: translateY(-0.4rem);
+    }
   }
 }

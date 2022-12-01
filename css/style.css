@@ -8941,3 +8941,53 @@ input[type=number] {
 .footer__bottom-info a:hover:after {
   background-color: transparent;
 }
+.footer__top-it {
+  position: relative;
+}
+.footer__top-it:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 1px;
+  background-color: #91959B;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.footer__top-it:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.footer__top-mess-it {
+  -webkit-transition: -webkit-transform ease 0.3s;
+  transition: -webkit-transform ease 0.3s;
+  transition: transform ease 0.3s;
+  transition: transform ease 0.3s, -webkit-transform ease 0.3s;
+}
+.footer__top-mess-it:hover {
+  -webkit-transform: translateY(-0.4rem);
+          transform: translateY(-0.4rem);
+}
+.footer__center-add-contacts a:hover {
+  -webkit-filter: invert(0.4);
+          filter: invert(0.4);
+}
+.footer__bottom-o a {
+  -webkit-transition: -webkit-transform ease 0.3s;
+  transition: -webkit-transform ease 0.3s;
+  transition: transform ease 0.3s;
+  transition: transform ease 0.3s, -webkit-transform ease 0.3s;
+}
+.footer__bottom-o a:hover {
+  -webkit-transform: translateY(-0.4rem);
+          transform: translateY(-0.4rem);
+}
