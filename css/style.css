@@ -9055,6 +9055,12 @@ input[type=number] {
   -webkit-perspective: 350rem;
           perspective: 350rem;
 }
+.catalog__item-wrap {
+  -webkit-transition: -webkit-transform 0s, -webkit-box-shadow 0.25s ease;
+  transition: -webkit-transform 0s, -webkit-box-shadow 0.25s ease;
+  transition: transform 0s, box-shadow 0.25s ease;
+  transition: transform 0s, box-shadow 0.25s ease, -webkit-transform 0s, -webkit-box-shadow 0.25s ease;
+}
 .catalog__item-wrap:hover {
   z-index: 5;
   -webkit-transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));

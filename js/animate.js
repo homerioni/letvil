@@ -261,7 +261,7 @@ $(document).ready(function () {
         let target = this.getBoundingClientRect(),
             x = ((e.clientX - target.left) / $(this).width() - 0.5) * -10,
             y = ((e.clientY - target.top) / $(this).height() - 0.5) * 10;
-        $('.catalog__item-wrap').css('--mouseY', x + 'deg').css('--mouseX', y + 'deg');
+        $(this).css('--mouseY', x + 'deg').css('--mouseX', y + 'deg');
     });
 
 });

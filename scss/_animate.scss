@@ -604,6 +604,8 @@
     perspective: 350rem;
   }
   &__item-wrap {
+    transition: transform 0s, box-shadow .25s ease;
+
     &:hover {
       z-index: 5;
       transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
