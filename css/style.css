@@ -9072,8 +9072,8 @@ input[type=number] {
   transition: -webkit-transform 0s, -webkit-box-shadow 0.25s ease;
   transition: transform 0s, box-shadow 0.25s ease;
   transition: transform 0s, box-shadow 0.25s ease, -webkit-transform 0s, -webkit-box-shadow 0.25s ease;
-  -webkit-box-shadow: 0 20px 40px rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
-          box-shadow: 0 20px 40px rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
+  -webkit-box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
+          box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
 }
 .catalog__item-wrap {
   width: 100%;
