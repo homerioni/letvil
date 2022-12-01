@@ -600,17 +600,29 @@
 
 .catalog {
   &__items {
-    z-index: 1;
-    perspective: 350rem;
+    gap: 5.2rem;
   }
-  &__item-wrap {
-    transition: transform 0s, box-shadow .25s ease;
+
+  &__item-box {
+    flex: 22%;
+    max-width: 36.6rem;
+    perspective: 100rem;
 
     &:hover {
       z-index: 5;
-      transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
-      transition: transform 0s, box-shadow .25s ease;
-      box-shadow: 0 20px 40px rgba(23, 38, 47, .3), inset 0 0 0 1px #d7e5f4;
+
+      .catalog__item-wrap {
+        z-index: 5;
+        transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
+        transition: transform 0s, box-shadow .25s ease;
+        box-shadow: 0 20px 40px rgba(23, 38, 47, .3), inset 0 0 0 1px #d7e5f4;
+      }
     }
+  }
+
+  &__item-wrap {
+    width: 100%;
+    margin: 0;
+    transition: transform 0s, box-shadow .25s ease;
   }
 }
