@@ -423,10 +423,10 @@
   }
 
   &__top-mess-it {
-    transition: transform ease .3s;
+    transition: transform ease .4s;
 
     &:hover {
-      transform: translateY(-0.4rem);
+      transform: scale(1.25);
     }
   }
 
