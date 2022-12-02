@@ -20,8 +20,32 @@ $(document).ready(function () {
     });
 
     // section pride
-    $('.pride__items').each(function () {
-        $(this).append($(this).html());
+    // $('.pride__items').each(function () {
+    //     $(this).append($(this).html());
+    // });
+    const pride_slider = new Swiper(".pride__items", {
+        slidesPerView: 7,
+        spaceBetween: rem(6),
+        speed: 10000,
+        loop: true,
+        grabCursor: true,
+        freeMode: true,
+
+        autoplay: {
+            delay: 1,
+            disableOnInteraction: false,
+        },
+
+        on: {
+            transitionStart: function (slider) {
+                if (slider.$wrapperEl.css('transition-duration') === '10s') {
+                    slider.$wrapperEl.css('transition-timing-function', '');
+                }
+            },
+            touchEnd: function (slider) {
+                slider.$wrapperEl.css('transition-timing-function', 'cubic-bezier(0.175, 0.885, 0.320, 1.275)');
+            },
+        }
     });
 
     // catalog cards
