@@ -43,7 +43,7 @@ $(document).ready(function () {
                 }
             },
             touchEnd: function (slider) {
-                slider.$wrapperEl.css('transition-timing-function', 'cubic-bezier(0.175, 0.885, 0.320, 1.275)');
+                slider.$wrapperEl.css('transition-timing-function', 'cubic-bezier(0.165, 0.840, 0.440, 1.000)');
             },
         }
     });
