@@ -29,7 +29,12 @@ $(document).ready(function () {
         speed: 10000,
         loop: true,
         grabCursor: true,
-        freeMode: true,
+        freeMode: {
+            enabled: true,
+            momentumBounceRatio: 0.1,
+            momentumRatio: 2,
+            momentumVelocityRatio: 0.2,
+        },
 
         autoplay: {
             delay: 1,
