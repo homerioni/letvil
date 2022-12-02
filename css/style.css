@@ -8881,9 +8881,25 @@ input[type=number] {
 .footer__bottom-info a:hover:after {
   background-color: transparent;
 }
+.footer__top-it {
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.footer__top-it > svg {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 0.8rem;
+}
+.footer__top-it > svg path {
+  fill: #91959B;
+  -webkit-transition: fill 0.2s ease;
+  transition: fill 0.2s ease;
+}
 .footer__top-it:hover {
-  -webkit-filter: invert(0.4);
-          filter: invert(0.4);
+  color: rgb(88, 152, 66);
+}
+.footer__top-it:hover > svg path {
+  fill: rgb(88, 152, 66);
 }
 .footer__top-mess-it {
   -webkit-transition: -webkit-transform ease 0.4s;
@@ -8896,8 +8912,7 @@ input[type=number] {
           transform: scale(1.25);
 }
 .footer__center-add-contacts a:hover {
-  -webkit-filter: invert(0.4);
-          filter: invert(0.4);
+  color: rgb(68, 122, 50);
 }
 .footer__bottom-o a {
   -webkit-transition: -webkit-transform ease 0.3s;

@@ -417,8 +417,27 @@
   }
 
   &__top-it {
+    transition: color .2s ease;
+
+    > svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 0.8rem;
+
+      path {
+        fill: #91959B;
+        transition: fill .2s ease;
+      }
+    }
+
     &:hover {
-      filter: invert(.4);
+      color: rgb(88, 152, 66);
+
+      > svg {
+        path {
+          fill: rgb(88, 152, 66);
+        }
+      }
     }
   }
 
@@ -432,7 +451,7 @@
 
   &__center-add-contacts a {
     &:hover {
-      filter: invert(.4);
+      color: rgb(68, 122, 50);
     }
   }
 
