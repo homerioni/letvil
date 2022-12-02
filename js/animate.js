@@ -9,12 +9,6 @@ $(document).ready(function () {
         }
     }
 
-    // Parallax
-    // $('.block').parallax({
-    //     imageSrc: './img/block-parallax.webp',
-    //     speed: 0.85,
-    // });
-
     // section - block
     let formsTimeOut;
     $('.forms__content-form input, .forms__content-form textarea').keypress(function () {

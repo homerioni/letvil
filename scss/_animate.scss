@@ -143,33 +143,6 @@
   }
 }
 
-.block {
-  // Parallax
-
-  //position: relative;
-  //overflow: hidden;
-  //
-  //&:before {
-  //  content: '';
-  //  position: absolute;
-  //  left: 0;
-  //  top: 0;
-  //  width: 100%;
-  //  height: 1px;
-  //  box-shadow: 0 1rem 10rem 5rem rgba(0,0,0,.4);
-  //}
-  //
-  //&:after {
-  //  content: '';
-  //  position: absolute;
-  //  left: 0;
-  //  bottom: 0;
-  //  width: 100%;
-  //  height: 1px;
-  //  box-shadow: 0 -1rem 10rem 5rem rgba(0,0,0,.4);
-  //}
-}
-
 .forms {
   &__img2 {
     position: relative;
@@ -569,8 +542,8 @@
 
 .hang {
   &__swiper-i {
-    margin: -6rem;
-    padding: 6rem;
+    margin: -8rem;
+    padding: 8rem;
   }
 
   &__item {
