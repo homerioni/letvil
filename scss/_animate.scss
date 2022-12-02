@@ -442,9 +442,13 @@
   }
 
   &__top-mess-it {
-    transition: transform ease .4s;
+    filter: grayscale(1);
+    opacity: .5;
+    transition: transform ease .4s, filter ease .4s, opacity ease .4s;
 
     &:hover {
+      opacity: 1;
+      filter: grayscale(0);
       transform: scale(1.25);
     }
   }
