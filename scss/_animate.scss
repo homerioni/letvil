@@ -568,13 +568,32 @@
 }
 
 .hang {
-  &__item-box {
-    flex: 22%;
-    max-width: 36rem;
-    height: auto;
+  &__swiper-i {
+    margin: -6rem;
+    padding: 6rem;
   }
 
   &__item {
-    width: 100%;
+    perspective: 100rem;
+    padding: 0;
+    background: none;
+
+    &:hover {
+      z-index: 5;
+
+      .hang__item-content {
+        z-index: 5;
+        transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
+        transition: transform 0s, box-shadow .25s ease;
+        box-shadow: 0 2rem 4rem rgba(23, 38, 47, .3), inset 0 0 0 1px #d7e5f4;
+      }
+    }
+  }
+
+  &__item-content {
+    height: 100%;
+    padding: 3.5rem 3.5rem 3.4rem 3.7rem;
+    border-radius: inherit;
+    background: #E2E9E9;
   }
 }

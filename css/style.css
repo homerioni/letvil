@@ -1674,6 +1674,9 @@ input[type=number] {
   padding: 3.5rem 3.5rem 3.4rem 3.7rem;
   height: auto;
 }
+.hang__item:not(:last-child) {
+  margin-right: 6rem;
+}
 .hang__item-num {
   background: #FFFFFF;
   -webkit-box-shadow: 0.6rem 1rem 3rem rgba(0, 0, 0, 0.05);
@@ -9047,13 +9050,33 @@ input[type=number] {
   transition: transform 0s, box-shadow 0.25s ease, -webkit-transform 0s, -webkit-box-shadow 0.25s ease;
 }
 
-.hang__item-box {
-  -webkit-box-flex: 22%;
-      -ms-flex: 22%;
-          flex: 22%;
-  max-width: 36rem;
-  height: auto;
+.hang__swiper-i {
+  margin: -6rem;
+  padding: 6rem;
 }
 .hang__item {
-  width: 100%;
+  -webkit-perspective: 100rem;
+          perspective: 100rem;
+  padding: 0;
+  background: none;
+}
+.hang__item:hover {
+  z-index: 5;
+}
+.hang__item:hover .hang__item-content {
+  z-index: 5;
+  -webkit-transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
+          transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
+  -webkit-transition: -webkit-transform 0s, -webkit-box-shadow 0.25s ease;
+  transition: -webkit-transform 0s, -webkit-box-shadow 0.25s ease;
+  transition: transform 0s, box-shadow 0.25s ease;
+  transition: transform 0s, box-shadow 0.25s ease, -webkit-transform 0s, -webkit-box-shadow 0.25s ease;
+  -webkit-box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
+          box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
+}
+.hang__item-content {
+  height: 100%;
+  padding: 3.5rem 3.5rem 3.4rem 3.7rem;
+  border-radius: inherit;
+  background: #E2E9E9;
 }
