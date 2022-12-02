@@ -22,7 +22,7 @@ $(document).ready(function () {
         $('.forms__img2').addClass('active');
         formsTimeOut = setTimeout(function () {
             $('.forms__img2').removeClass('active');
-        }, 1000);
+        }, 200);
     });
 
     // section pride
@@ -55,7 +55,7 @@ $(document).ready(function () {
         setTimeout(function () {
             lottieLogo.stop();
             lottieLogo.play();
-        }, 30000)
+        }, 30000);
     });
 
 });
