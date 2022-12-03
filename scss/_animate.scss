@@ -394,6 +394,20 @@
 }
 
 .footer {
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    height: 4.5rem;
+
+    > * {
+      height: 200%;
+      width: 200%;
+      transform: scale(2.6);
+    }
+  }
+
   &__center-btn {
     @include btn-hover;
   }

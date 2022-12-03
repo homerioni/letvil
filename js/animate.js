@@ -70,15 +70,25 @@ $(document).ready(function () {
     });
 
     // Logo animate
-    let lottieLogo = document.querySelector('.header__logo-anim').getLottie();
+    let lottieLogoHeader = document.querySelector('.header__logo-anim').getLottie();
     setTimeout(function () {
-        lottieLogo.play();
+        lottieLogoHeader.play();
     }, 5000);
-    lottieLogo.addEventListener("complete", () => {
+    lottieLogoHeader.addEventListener("complete", () => {
         setTimeout(function () {
-            lottieLogo.stop();
-            lottieLogo.play();
+            lottieLogoHeader.stop();
+            lottieLogoHeader.play();
         }, 30000);
+    });
+    let lottieLogoFooter = document.querySelector('.footer__logo-anim').getLottie();
+    setTimeout(function () {
+        lottieLogoFooter.play();
+    }, 15000);
+    lottieLogoFooter.addEventListener("complete", () => {
+        setTimeout(function () {
+            lottieLogoFooter.stop();
+            lottieLogoFooter.play();
+        }, 40000);
     });
 
     // Categories
