@@ -567,6 +567,32 @@
     margin: 0;
     transition: transform 3s, box-shadow .25s ease;
   }
+
+  &__btns-btn {
+    @include btn-hover;
+  }
+
+  &__btns-link {
+    &:hover {
+      &:after {
+        visibility: hidden;
+      }
+    }
+  }
+
+  &__btns-filter {
+    transition: box-shadow .3s ease, transform .3s ease;
+
+    &:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: 0 1.5rem 1.5rem -1rem rgba(34, 60, 80, 0.3);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
 }
 
 .hang {
@@ -602,6 +628,16 @@
 }
 
 .category {
+  &__cc {
+    .category__slider {
+      gap: 5.4rem;
+    }
+    .category__slide {
+      width: 50.4rem;
+      margin: 0;
+    }
+  }
+
   &__slide {
     &:hover {
       .category__slide-bg path {
@@ -609,6 +645,7 @@
       }
     }
   }
+
   &__slide-bg {
     position: absolute;
     left: 0;
@@ -623,35 +660,13 @@
     }
   }
 
-  &__slide-svg-bg {
-    > svg {
-      path {
-        fill: #F2F6F6;
-      }
-
-      &:first-child {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: -4;
-        width: 14rem;
-        height: 10rem;
-      }
-
-      &:last-child {
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: -4;
-        width: 14rem;
-        height: 10rem;
-        transform: scale(-1);
-      }
-    }
-  }
-
   &__hover {
-    //display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 
     > svg {
       path {
