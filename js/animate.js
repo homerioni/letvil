@@ -81,4 +81,75 @@ $(document).ready(function () {
         }, 30000);
     });
 
+    // Categories
+    // const categoryHoverAnime = anime({
+    //     targets: '.category__hover svg path',
+    //     autoplay: false,
+    //     easing: 'cubicBezier(0.250, 0.100, 0.250, 1.000)',
+    //     duration: 700,
+    //     delay: -350,
+    //
+    //     d: [
+    //         { value: 'M12 0C9.9 15.1 6 35 3 60L1 81C1 97 11 108 29 108L62 109C96 109 107 109 128 108L127.6 133.6-15.4 133.6-15.4.6Z' },
+    //         { value: 'M12 0C9.9 15.1 21.7 28.5 36.9 28.4L80.2 28.1C95.4 28 107.2 41.4 105.1 56.5L103 71.7C100.9 86.7 112.6 100.1 127.7 100.1L127.6 133.6-15.4 133.6-15.4.6Z' },
+    //     ],
+    // });
+
+    // categoryHoverAnime.play();
+    // console.log(categoryHoverAnime);
+    // $('.category__slide').hover(function () {
+    //     categoryHoverAnime.reverse();
+    //     categoryHoverAnime.play();
+    // }, function () {
+    //     categoryHoverAnime.reverse();
+    //     categoryHoverAnime.play();
+    // });
+
+    class CategoryItem {
+        constructor(el) {
+            this.el = el;
+            this.MyIndex = $(el).index() + 1;
+            this.initEvents();
+        }
+        initEvents() {
+            this.mouseenterFn = () => {
+                this.mouseTimeout = setTimeout(() => {
+                    this.isActive = true;
+                    this.animate();
+                }, 75);
+            }
+            this.mouseleaveFn = () => {
+                clearTimeout(this.mouseTimeout);
+                if( this.isActive ) {
+                    this.isActive = false;
+                    this.animate();
+                }
+            }
+            this.el.addEventListener('mouseenter', this.mouseenterFn);
+            this.el.addEventListener('mouseleave', this.mouseleaveFn);
+            this.el.addEventListener('touchstart', this.mouseenterFn);
+            this.el.addEventListener('touchend', this.mouseleaveFn);
+        }
+        getAnimeObj() {
+            const target = '.category__slide:nth-child('+ this.MyIndex + ') .category__hover svg path';
+            let animeOpts = {
+                targets: target,
+                autoplay: true,
+                easing: 'cubicBezier(0.250, 0.100, 0.250, 1.000)',
+                duration: 300,
+            };
+            animeOpts.d = this.isActive
+                ? 'M12 0C9.9 15.1 6 35 3 60L1 81C1 97 11 108 29 108L62 109C96 109 107 109 128 108L127.6 133.6-15.4 133.6-15.4.6Z'
+                : 'M12 0C9.9 15.1 21.7 28.5 36.9 28.4L80.2 28.1C95.4 28 107.2 41.4 105.1 56.5L103 71.7C100.9 86.7 112.6 100.1 127.7 100.1L127.6 133.6-15.4 133.6-15.4.6Z';
+            anime.remove(target);
+            return animeOpts;
+        }
+        animate() {
+            anime(this.getAnimeObj());
+        }
+    }
+
+    const items = Array.from(document.querySelectorAll('.category__slide'));
+    const init = (() => items.forEach(item => new CategoryItem(item)))();
+
 });

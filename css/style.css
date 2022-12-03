@@ -1396,7 +1396,6 @@ input[type=number] {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/category-bg.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1577,9 +1576,6 @@ input[type=number] {
 }
 
 @media (min-width: 47.99em) {
-  .category__slide:hover::after {
-    background-image: url(../img/category-bg2.svg);
-  }
   .category__slide:hover .category__slide-name {
     color: #ffffff;
   }
@@ -9066,4 +9062,63 @@ input[type=number] {
   transition: -webkit-transform 0.3s, -webkit-box-shadow 0.25s ease;
   transition: transform 0.3s, box-shadow 0.25s ease;
   transition: transform 0.3s, box-shadow 0.25s ease, -webkit-transform 0.3s, -webkit-box-shadow 0.25s ease;
+}
+
+.category__slide:hover .category__slide-bg path {
+  fill: #7AC361;
+}
+.category__slide-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -5;
+  width: 100%;
+  height: 100%;
+}
+.category__slide-bg path {
+  fill: #E2E9E9;
+  -webkit-transition: fill 0.4s ease;
+  transition: fill 0.4s ease;
+}
+.category__slide-svg-bg > svg path {
+  fill: #F2F6F6;
+}
+.category__slide-svg-bg > svg:first-child {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -4;
+  width: 14rem;
+  height: 10rem;
+}
+.category__slide-svg-bg > svg:last-child {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -4;
+  width: 14rem;
+  height: 10rem;
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+}
+.category__hover > svg path {
+  fill: #F2F6F6;
+}
+.category__hover > svg:first-child {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -4;
+  width: 14rem;
+  height: 10rem;
+}
+.category__hover > svg:last-child {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -4;
+  width: 14rem;
+  height: 10rem;
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
 }

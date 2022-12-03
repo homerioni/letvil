@@ -22,7 +22,7 @@
          top: 0;
          width: 100%;
          height: 100%;
-         background-image: url(../img/category-bg.svg);
+         //background-image: url(../img/category-bg.svg);
          background-size: cover;
          background-position: center;
          background-repeat: no-repeat;
@@ -185,7 +185,7 @@
    .category {
       &__slide {
          &:hover::after {
-            background-image: url(../img/category-bg2.svg);
+            //background-image: url(../img/category-bg2.svg);
          }
          &:hover .category__slide-name {
             color: $white;
