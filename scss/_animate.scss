@@ -1,52 +1,17 @@
 @mixin btn-hover {
-  position: relative;
-  transition: transform .4s ease;
+  box-shadow: 0 1.5rem 1.5rem -1rem rgba(34, 60, 80, 0);
+  transition: transform .4s ease, box-shadow .4s ease;
   user-select: none;
-
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    transform: translateY(-5px);
-    opacity: 0;
-    border-radius: inherit;
-    box-shadow: 0 1.5rem 1.5rem -1rem rgba(34, 60, 80, 0.3);
-    transition: opacity .4s ease, transform .4s ease;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    background-color: inherit;
-  }
 
   &:hover {
     transform: translateY(-0.2rem);
-
-    &:before {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    box-shadow: 0 1.5rem 1.5rem -1rem rgba(34, 60, 80, 0.3);
   }
 
   &:active {
     transform: translateY(0);
-
-    &:before {
-      opacity: 0;
-      transform: translateY(0);
-      transition: opacity .2s ease, transform .2s ease;
-    }
+    box-shadow: 0 1.5rem 1.5rem -1rem rgba(34, 60, 80, 0);
+    transition: transform .15s ease, box-shadow .15s ease;
   }
 }
 
@@ -84,11 +49,6 @@
 
   &__btns-btn {
     @include btn-hover;
-    border: none;
-
-    &:after {
-      border: 1px solid white;
-    }
   }
 
   &__contacts-phone {
@@ -273,6 +233,7 @@
     &:after {
       transition: box-shadow .4s ease;
     }
+
     &:hover {
       &:after {
         box-shadow: 0 1.5rem 1.5rem 0rem rgba(34, 60, 80, 0.3);
@@ -296,25 +257,6 @@
     position: relative;
     height: 46rem;
   }
-
-  // Old animation
-  //&__items {
-  //  position: absolute;
-  //  left: 0;
-  //  top: 0;
-  //  height: 22rem;
-  //  justify-content: normal;
-  //  animation: 70s linear infinite infinite-translate;
-  //
-  //  &:first-child {
-  //    left: -14.4rem;
-  //    animation: 80.25s linear infinite infinite-translate;
-  //  }
-  //
-  //  &:last-child {
-  //    top: 24rem;
-  //  }
-  //}
 
   &__items {
     .swiper-wrapper {
@@ -592,6 +534,18 @@
       box-shadow: none;
     }
   }
+
+  &__bc a {
+    &:hover {
+      color: #1D1F26;
+    }
+  }
+
+  &__select {
+    .select_checked:hover {
+      color: rgb(88, 152, 66);
+    }
+  }
 }
 
 .hang {
@@ -690,6 +644,14 @@
         height: 10rem;
         transform: scale(-1);
       }
+    }
+  }
+}
+
+.filter {
+  &__item {
+    &:hover {
+      color: #1D1F26;
     }
   }
 }
