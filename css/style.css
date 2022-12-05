@@ -4751,8 +4751,8 @@ input[type=number] {
 }
 .products__slider {
   position: relative;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.06)), to(rgba(0, 0, 0, 0.06))), url(image.png);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), url(image.png);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.06)), to(rgba(0, 0, 0, 0.06)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06));
   border: 1.5rem solid #FFFFFF;
   border-radius: 10rem;
   width: 100.8rem;
@@ -8198,9 +8198,8 @@ input[type=number] {
 }
 .header__logo-anim {
   height: 200%;
-  -webkit-transform: scale(1.9) !important;
-          transform: scale(1.9) !important;
-  mix-blend-mode: darken;
+  -webkit-transform: scale(2.8) translateY(2px) !important;
+          transform: scale(2.8) translateY(2px) !important;
 }
 .header__online {
   position: relative;
