@@ -705,4 +705,203 @@
   &__header-filter {
     @include btn-hover;
   }
+
+  &__description-btn {
+    &:hover {
+      transform: translate(-50%, -0.2rem);
+    }
+  }
+}
+
+@keyframes phone-vibration {
+  from {
+    transform: rotate(-1deg);
+  }
+
+  0.5% {
+    transform: rotate(1deg);
+  }
+
+  1% {
+    transform: rotate(-1deg);
+  }
+
+  1.5% {
+    transform: rotate(1deg);
+  }
+
+  2% {
+    transform: rotate(-1deg);
+  }
+
+  2.5% {
+    transform: rotate(1deg);
+  }
+
+  3% {
+    transform: rotate(-1deg);
+  }
+
+  3.5% {
+    transform: rotate(1deg);
+  }
+
+  4% {
+    transform: rotate(-1deg);
+  }
+
+  4.5% {
+    transform: rotate(1deg);
+  }
+
+  5% {
+    transform: rotate(-1deg);
+  }
+
+  5.5% {
+    transform: rotate(1deg);
+  }
+
+  6% {
+    transform: rotate(-1deg);
+  }
+
+  6.5% {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.inblock {
+  &__img-contacts {
+    position: relative;
+    width: 46rem;
+    height: 34.2rem;
+  }
+
+  &__img-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22.2rem;
+    height: 31.1rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+      &.phone {
+        position: absolute;
+        left: 9.1rem;
+        top: -0.9rem;
+        width: 12.5rem;
+        height: 17rem;
+        animation-iteration-count: infinite;
+        animation-duration: 8s;
+        animation-delay: 1s;
+        animation-timing-function: linear;
+        animation-name: phone-vibration;
+      }
+    }
+  }
+
+  &__img-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 23.2rem;
+    height: 30rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+      &.phone {
+        position: absolute;
+        left: 1.1rem;
+        top: -1.3rem;
+        width: 11rem;
+        height: 17rem;
+        animation-iteration-count: infinite;
+        animation-duration: 8s;
+        animation-delay: 3s;
+        animation-timing-function: linear;
+        animation-name: phone-vibration;
+      }
+    }
+  }
+}
+
+.contacts {
+  &__item-n-link {
+    &:hover {
+      &:after {
+        visibility: hidden;
+      }
+    }
+  }
+
+  &__item-s-el {
+    transition: transform .4s ease;
+
+    &:hover {
+      transform: translateX(0.6rem);
+    }
+  }
+}
+
+.article {
+  &__small-slide {
+    overflow: hidden;
+    cursor: pointer;
+
+    > img {
+      transition: transform .5s ease;
+    }
+
+    &:hover {
+      > img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__img-soc-mess a {
+    &:hover {
+      color: #1D1F27;
+    }
+  }
+
+  &__top-link {
+    transition: color .4s ease;
+
+    &:after {
+      transition: transform .4s ease;
+    }
+
+    &:hover {
+      color: #1D1F27;
+
+      &:after {
+        transform: translate(-1rem, -50%) rotate(180deg);
+      }
+    }
+  }
+
+  &__img-video {
+    &:after {
+      transition: transform .5s ease;
+    }
+
+    &:hover {
+      &:after {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+  }
 }

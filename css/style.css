@@ -9050,3 +9050,257 @@ input[type=number] {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   transition: transform 0.15s ease, box-shadow 0.15s ease, -webkit-transform 0.15s ease, -webkit-box-shadow 0.15s ease;
 }
+.products__description-btn:hover {
+  -webkit-transform: translate(-50%, -0.2rem);
+          transform: translate(-50%, -0.2rem);
+}
+
+@-webkit-keyframes phone-vibration {
+  from {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  0.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  1% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  1.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  2% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  2.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  3% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  3.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  4% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  4.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  5% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  5.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  6% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  6.5% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes phone-vibration {
+  from {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  0.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  1% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  1.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  2% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  2.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  3% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  3.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  4% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  4.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  5% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  5.5% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  6% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  6.5% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+.inblock__img-contacts {
+  position: relative;
+  width: 46rem;
+  height: 34.2rem;
+}
+.inblock__img-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22.2rem;
+  height: 31.1rem;
+}
+.inblock__img-left > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.inblock__img-left > img.phone {
+  position: absolute;
+  left: 9.1rem;
+  top: -0.9rem;
+  width: 12.5rem;
+  height: 17rem;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: phone-vibration;
+          animation-name: phone-vibration;
+}
+.inblock__img-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 23.2rem;
+  height: 30rem;
+}
+.inblock__img-right > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.inblock__img-right > img.phone {
+  position: absolute;
+  left: 1.1rem;
+  top: -1.3rem;
+  width: 11rem;
+  height: 17rem;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: phone-vibration;
+          animation-name: phone-vibration;
+}
+
+.contacts__item-n-link:hover:after {
+  visibility: hidden;
+}
+.contacts__item-s-el {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+.contacts__item-s-el:hover {
+  -webkit-transform: translateX(0.6rem);
+          transform: translateX(0.6rem);
+}
+
+.article__small-slide {
+  overflow: hidden;
+  cursor: pointer;
+}
+.article__small-slide > img {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.article__small-slide:hover > img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.article__img-soc-mess a:hover {
+  color: #1D1F27;
+}
+.article__top-link {
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+.article__top-link:after {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+.article__top-link:hover {
+  color: #1D1F27;
+}
+.article__top-link:hover:after {
+  -webkit-transform: translate(-1rem, -50%) rotate(180deg);
+          transform: translate(-1rem, -50%) rotate(180deg);
+}
+.article__img-video:after {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.article__img-video:hover:after {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
+}
