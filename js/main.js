@@ -461,6 +461,8 @@ document.addEventListener("DOMContentLoaded", function () {
       var data = $(this).data('question');
       $('.tabs__content').removeClass('active');
       $('.tabs__content[data-question=' + data + ']').toggleClass('active');
+      $('.products__btn-bg img').removeClass('active');
+      $('.products__btn-bg img[data-question=' + data + ']').toggleClass('active');
     });
 
   // ЯНДЕКС КАРТА
