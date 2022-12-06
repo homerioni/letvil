@@ -938,19 +938,12 @@
     width: 9rem;
     font-size: 1.5rem;
   }
-}
 
-.slider-active {
-  height: auto !important;
-  overflow: visible;
-
-  .swiper-wrapper {
-    flex-wrap: wrap;
-    gap: 2.8rem;
-  }
-
-  .swiper-slide {
-    width: 15%;
-    height: 11.5rem;
+  &__main {
+    a {
+      &:hover {
+        color: #1D1F27;
+      }
+    }
   }
 }
