@@ -9304,3 +9304,50 @@ input[type=number] {
   -webkit-transform: translate(-50%, -50%) scale(1.2);
           transform: translate(-50%, -50%) scale(1.2);
 }
+
+.dio__add-calculator-title {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.dio__add-calculator-text {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.dio__add-calculator-img {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+.dio__add-calculator {
+  overflow: hidden;
+}
+.dio__add-calculator > * {
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+}
+.dio__add-calculator:hover > * {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.dio__calc-text-animate {
+  position: absolute;
+  left: 2rem;
+  top: 3.5rem;
+  width: 9rem;
+  font-size: 1.5rem;
+}
+
+.slider-active {
+  height: auto !important;
+  overflow: visible;
+}
+.slider-active .swiper-wrapper {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2.8rem;
+}
+.slider-active .swiper-slide {
+  width: 15%;
+  height: 11.5rem;
+}

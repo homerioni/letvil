@@ -905,3 +905,52 @@
     }
   }
 }
+
+.dio {
+  &__add-calculator-title {
+    transform-origin: left;
+  }
+
+  &__add-calculator-text {
+    transform-origin: left;
+  }
+
+  &__add-calculator-img {
+    transform-origin: bottom;
+  }
+
+  &__add-calculator {
+    overflow: hidden;
+
+    > * {
+      transition: transform .8s ease;
+    }
+
+    &:hover > * {
+      transform: scale(1.1);
+    }
+  }
+
+  &__calc-text-animate {
+    position: absolute;
+    left: 2rem;
+    top: 3.5rem;
+    width: 9rem;
+    font-size: 1.5rem;
+  }
+}
+
+.slider-active {
+  height: auto !important;
+  overflow: visible;
+
+  .swiper-wrapper {
+    flex-wrap: wrap;
+    gap: 2.8rem;
+  }
+
+  .swiper-slide {
+    width: 15%;
+    height: 11.5rem;
+  }
+}

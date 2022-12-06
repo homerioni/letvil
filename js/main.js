@@ -313,10 +313,10 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 1,
     spaceBetween: rem(1),
     speed: 1500,
-    
+
     thumbs: {
       swiper: {
-        el: '.article__small-swiper',
+          el: '.article__small-swiper',
           slidesPerView: 6,
           speed: 1200,
           spaceBetween: rem(2.7),
