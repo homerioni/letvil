@@ -9238,8 +9238,8 @@ input[type=number] {
           animation-iteration-count: infinite;
   -webkit-animation-duration: 8s;
           animation-duration: 8s;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-name: phone-vibration;
