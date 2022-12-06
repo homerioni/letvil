@@ -9057,56 +9057,56 @@ input[type=number] {
 
 @-webkit-keyframes phone-vibration {
   from {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   0.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   1% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   1.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   2% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   2.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   3% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   3.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   4% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   4.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   5% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   5.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   6% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   6.5% {
     -webkit-transform: rotate(0deg);
@@ -9120,56 +9120,56 @@ input[type=number] {
 
 @keyframes phone-vibration {
   from {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   0.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   1% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   1.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   2% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   2.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   3% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   3.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   4% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   4.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   5% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   5.5% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
   6% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   6.5% {
     -webkit-transform: rotate(0deg);
