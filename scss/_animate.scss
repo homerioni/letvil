@@ -780,6 +780,18 @@
   }
 }
 
+@keyframes inblock-img-shadow {
+  from {
+    transform: translateX(-50%) rotate(-4deg) scale(.6);
+    opacity: .6;
+  }
+
+  to {
+    transform: translateX(-50%) rotate(-4deg) scale(1);
+    opacity: .9;
+  }
+}
+
 .inblock {
   &__img-contacts {
     position: relative;
@@ -867,6 +879,32 @@
       &:after {
         transform: translate(-50%, -50%) scale(1.2);
       }
+    }
+  }
+
+  &__img {
+    width: 47rem;
+    height: 62rem;
+    bottom: -12rem;
+
+    > img {
+      object-fit: contain;
+      animation: 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite steps-img-translate alternate;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 52%;
+      bottom: 7rem;
+      z-index: -1;
+      width: 40rem;
+      height: 10rem;
+      border-radius: 100%;
+      transform: translateX(-50%) rotate(10deg);
+      background-color: rgba(74, 130, 55, .65);
+      filter: blur(1.6rem);
+      animation: 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite inblock-img-shadow alternate;
     }
   }
 }
@@ -1140,6 +1178,26 @@
     perspective: 18rem;
 
     > img {
+      transition: transform .5s ease;
+    }
+  }
+}
+
+.services {
+  &__item {
+    &:hover {
+      .services__item-img {
+        > img {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  &__item-img {
+    overflow: hidden;
+
+    > img {
+      transform: scale(1.1);
       transition: transform .5s ease;
     }
   }

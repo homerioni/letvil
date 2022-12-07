@@ -9186,6 +9186,30 @@ input[type=number] {
             transform: rotate(0deg);
   }
 }
+@-webkit-keyframes inblock-img-shadow {
+  from {
+    -webkit-transform: translateX(-50%) rotate(-4deg) scale(0.6);
+            transform: translateX(-50%) rotate(-4deg) scale(0.6);
+    opacity: 0.6;
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(-4deg) scale(1);
+            transform: translateX(-50%) rotate(-4deg) scale(1);
+    opacity: 0.9;
+  }
+}
+@keyframes inblock-img-shadow {
+  from {
+    -webkit-transform: translateX(-50%) rotate(-4deg) scale(0.6);
+            transform: translateX(-50%) rotate(-4deg) scale(0.6);
+    opacity: 0.6;
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(-4deg) scale(1);
+            transform: translateX(-50%) rotate(-4deg) scale(1);
+    opacity: 0.9;
+  }
+}
 .inblock__img-contacts {
   position: relative;
   width: 46rem;
@@ -9271,6 +9295,34 @@ input[type=number] {
 .inblock__left-content-video:hover:after {
   -webkit-transform: translate(-50%, -50%) scale(1.2);
           transform: translate(-50%, -50%) scale(1.2);
+}
+.inblock__img {
+  width: 47rem;
+  height: 62rem;
+  bottom: -12rem;
+}
+.inblock__img > img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-animation: 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite steps-img-translate alternate;
+          animation: 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite steps-img-translate alternate;
+}
+.inblock__img:before {
+  content: "";
+  position: absolute;
+  left: 52%;
+  bottom: 7rem;
+  z-index: -1;
+  width: 40rem;
+  height: 10rem;
+  border-radius: 100%;
+  -webkit-transform: translateX(-50%) rotate(10deg);
+          transform: translateX(-50%) rotate(10deg);
+  background-color: rgba(74, 130, 55, 0.65);
+  -webkit-filter: blur(1.6rem);
+          filter: blur(1.6rem);
+  -webkit-animation: 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite inblock-img-shadow alternate;
+          animation: 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite inblock-img-shadow alternate;
 }
 
 .contacts__item-n-link:hover:after {
@@ -9538,6 +9590,22 @@ input[type=number] {
           perspective: 18rem;
 }
 .articles__item-img > img {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.services__item:hover .services__item-img > img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.services__item-img {
+  overflow: hidden;
+}
+.services__item-img > img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
