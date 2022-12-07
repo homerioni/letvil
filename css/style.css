@@ -8854,6 +8854,12 @@ input[type=number] {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   transition: transform 0.15s ease, box-shadow 0.15s ease, -webkit-transform 0.15s ease, -webkit-box-shadow 0.15s ease;
 }
+.catalog__btns-btn.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-shadow: 0 1.5rem 1.5rem -1rem rgba(34, 60, 80, 0);
+          box-shadow: 0 1.5rem 1.5rem -1rem rgba(34, 60, 80, 0);
+}
 .catalog__btns-link:hover:after {
   visibility: hidden;
 }
@@ -9245,6 +9251,11 @@ input[type=number] {
   -webkit-animation-name: phone-vibration;
           animation-name: phone-vibration;
 }
+.inblock__about .inblock__img {
+  width: 55rem;
+  height: 70rem;
+  right: 50rem;
+}
 
 .contacts__item-n-link:hover:after {
   visibility: hidden;
@@ -9362,34 +9373,6 @@ input[type=number] {
             transform: rotate(360deg);
   }
 }
-@-webkit-keyframes man-fly {
-  from {
-    -webkit-transform: translateX(-2rem) rotate(0deg);
-            transform: translateX(-2rem) rotate(0deg);
-  }
-  50% {
-    -webkit-transform: translateX(2rem) rotate(-6deg);
-            transform: translateX(2rem) rotate(-6deg);
-  }
-  to {
-    -webkit-transform: translateX(-2rem) rotate(0deg);
-            transform: translateX(-2rem) rotate(0deg);
-  }
-}
-@keyframes man-fly {
-  from {
-    -webkit-transform: translateX(-2rem) rotate(0deg);
-            transform: translateX(-2rem) rotate(0deg);
-  }
-  50% {
-    -webkit-transform: translateX(2rem) rotate(-6deg);
-            transform: translateX(2rem) rotate(-6deg);
-  }
-  to {
-    -webkit-transform: translateX(-2rem) rotate(0deg);
-            transform: translateX(-2rem) rotate(0deg);
-  }
-}
 .info__img {
   width: 50.4rem;
   height: 50.4rem;
@@ -9404,14 +9387,6 @@ input[type=number] {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -webkit-animation-name: man-fly;
-          animation-name: man-fly;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-          transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .info__img-bg {
   position: absolute;

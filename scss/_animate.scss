@@ -502,6 +502,11 @@
 
   &__btns-btn {
     @include btn-hover;
+
+    &.active {
+      transform: translateY(0);
+      box-shadow: 0 1.5rem 1.5rem -1rem rgba(34, 60, 80, 0);
+    }
   }
 
   &__btns-link {
@@ -835,6 +840,14 @@
       }
     }
   }
+
+  &__about {
+    .inblock__img {
+      width: 55rem;
+      height: 70rem;
+      right: 50rem;
+    }
+  }
 }
 
 .contacts {
@@ -958,20 +971,6 @@
   }
 }
 
-@keyframes man-fly {
-  from {
-    transform: translateX(-2rem) rotate(0deg);
-  }
-
-  50% {
-    transform: translateX(2rem) rotate(-6deg);
-  }
-
-  to {
-    transform: translateX(-2rem) rotate(0deg);
-  }
-}
-
 .info {
   &__img {
     width: 50.4rem;
@@ -987,10 +986,6 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      animation-name: man-fly;
-      animation-duration: 6s;
-      animation-iteration-count: infinite;
-      transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
     }
   }
 
