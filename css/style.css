@@ -9483,3 +9483,63 @@ input[type=number] {
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+.about__item-video-btn:after {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.about__item-video-btn:hover:after {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
+}
+
+.articles__item {
+  -webkit-perspective: 70rem;
+          perspective: 70rem;
+  height: auto;
+  padding: 0;
+  background: none;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+.articles__item:hover {
+  z-index: 5;
+}
+.articles__item:hover .articles__item-content {
+  z-index: 5;
+  -webkit-transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
+          transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
+  -webkit-transition: -webkit-box-shadow 0.25s ease;
+  transition: -webkit-box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
+  -webkit-box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
+          box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
+}
+.articles__item-content {
+  height: 100%;
+  padding: 3.7rem;
+  border-radius: inherit;
+  background: #E2E9E9;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.25s ease;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.25s ease;
+  transition: transform 0.3s, box-shadow 0.25s ease;
+  transition: transform 0.3s, box-shadow 0.25s ease, -webkit-transform 0.3s, -webkit-box-shadow 0.25s ease;
+}
+.articles__item-content:hover .articles__item-img > img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.articles__item-img {
+  overflow: hidden;
+  -webkit-perspective: 18rem;
+          perspective: 18rem;
+}
+.articles__item-img > img {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}

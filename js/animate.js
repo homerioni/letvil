@@ -64,6 +64,14 @@ $(document).ready(function () {
         $(this).css('--mouseY', x + 'deg').css('--mouseX', y + 'deg');
     });
 
+    // articles cards
+    $('.articles__item-content').mousemove(function(e){
+        let target = this.getBoundingClientRect(),
+            x = ((e.clientX - target.left) / $(this).width() - 0.5) * -10,
+            y = ((e.clientY - target.top) / $(this).height() - 0.5) * 10;
+        $(this).css('--mouseY', x + 'deg').css('--mouseX', y + 'deg');
+    });
+
     // Logo animate
     let lottieLogoHeader = document.querySelector('.header__logo-anim').getLottie();
     setTimeout(function () {
