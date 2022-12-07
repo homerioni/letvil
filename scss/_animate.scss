@@ -947,3 +947,124 @@
     }
   }
 }
+
+@keyframes info-bg-rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes man-fly {
+  from {
+    transform: translateX(-2rem) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(2rem) rotate(-6deg);
+  }
+
+  to {
+    transform: translateX(-2rem) rotate(0deg);
+  }
+}
+
+.info {
+  &__img {
+    width: 50.4rem;
+    height: 50.4rem;
+
+    &:after {
+      content: none;
+    }
+
+    > img {
+      position: relative;
+      right: 25rem;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      animation-name: man-fly;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    }
+  }
+
+  &__img-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59.7rem;
+    height: 49rem;
+    border-radius: 15rem;
+    background-color: #7AC361;
+    overflow: hidden;
+
+    > img {
+      width: 87.3rem;
+      height: 80.6rem;
+      object-fit: cover;
+      opacity: .35;
+      animation-name: info-bg-rotate;
+      animation-timing-function: linear;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+.card {
+  &__small-slide {
+    overflow: hidden;
+    cursor: pointer;
+
+    > img {
+      transition: transform .5s ease;
+    }
+
+    &:hover {
+      > img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__content-btns-quantity-plus,
+  &__content-btns-quantity-minus {
+    transition: transform .5s ease;
+
+    &:hover {
+      transform: scale(1.6);
+    }
+  }
+}
+
+.specification {
+  &__btn {
+    &.active:after {
+      content: none;
+    }
+  }
+
+  &__btns {
+    .active-line {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      height: 0.5rem;
+      width: 16rem;
+      transform: translateY(50%);
+      background: #6CBD50;
+      border-radius: 0.6rem;
+      transition: transform .4s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    }
+  }
+}

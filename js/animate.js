@@ -147,4 +147,11 @@ $(document).ready(function () {
         const typed = new Typed('.dio__calc-text-animate', calcOptions);
     }
 
+    //section specification
+    $('.active-line').width($('.specification__btn.active').width());
+    $('.specification__btn').click(function () {
+        $('.active-line').css('transform', 'translateY(50%) translateX('+ $(this).position().left +'px)')
+            .animate({width: $(this).width()}, 200);
+    });
+
 });

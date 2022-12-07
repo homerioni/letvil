@@ -9340,3 +9340,155 @@ input[type=number] {
 .dio__main a:hover {
   color: #1D1F27;
 }
+
+@-webkit-keyframes info-bg-rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes info-bg-rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes man-fly {
+  from {
+    -webkit-transform: translateX(-2rem) rotate(0deg);
+            transform: translateX(-2rem) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateX(2rem) rotate(-6deg);
+            transform: translateX(2rem) rotate(-6deg);
+  }
+  to {
+    -webkit-transform: translateX(-2rem) rotate(0deg);
+            transform: translateX(-2rem) rotate(0deg);
+  }
+}
+@keyframes man-fly {
+  from {
+    -webkit-transform: translateX(-2rem) rotate(0deg);
+            transform: translateX(-2rem) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateX(2rem) rotate(-6deg);
+            transform: translateX(2rem) rotate(-6deg);
+  }
+  to {
+    -webkit-transform: translateX(-2rem) rotate(0deg);
+            transform: translateX(-2rem) rotate(0deg);
+  }
+}
+.info__img {
+  width: 50.4rem;
+  height: 50.4rem;
+}
+.info__img:after {
+  content: none;
+}
+.info__img > img {
+  position: relative;
+  right: 25rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-animation-name: man-fly;
+          animation-name: man-fly;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.info__img-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 59.7rem;
+  height: 49rem;
+  border-radius: 15rem;
+  background-color: #7AC361;
+  overflow: hidden;
+}
+.info__img-bg > img {
+  width: 87.3rem;
+  height: 80.6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.35;
+  -webkit-animation-name: info-bg-rotate;
+          animation-name: info-bg-rotate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.card__small-slide {
+  overflow: hidden;
+  cursor: pointer;
+}
+.card__small-slide > img {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.card__small-slide:hover > img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.card__content-btns-quantity-plus, .card__content-btns-quantity-minus {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.card__content-btns-quantity-plus:hover, .card__content-btns-quantity-minus:hover {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+}
+
+.specification__btn.active:after {
+  content: none;
+}
+.specification__btns .active-line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  height: 0.5rem;
+  width: 16rem;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  background: #6CBD50;
+  border-radius: 0.6rem;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
