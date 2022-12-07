@@ -20,9 +20,6 @@ $(document).ready(function () {
     });
 
     // section pride
-    // $('.pride__items').each(function () {
-    //     $(this).append($(this).html());
-    // });
     const pride_slider = new Swiper(".pride__items", {
         slidesPerView: 7,
         spaceBetween: rem(6),
@@ -43,9 +40,7 @@ $(document).ready(function () {
 
         on: {
             beforeTransitionStart: function (slider) {
-                if (slider.$wrapperEl.css('transition-duration') == '10s') {
-                    slider.$wrapperEl.css('transition-timing-function', 'linear');
-                }
+                slider.$wrapperEl.css('transition-timing-function', 'linear');
             },
             touchStart: function (slider) {
                 slider.$wrapperEl.css('transition-timing-function', 'cubic-bezier(0.165, 0.840, 0.440, 1.000)');
