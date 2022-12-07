@@ -848,6 +848,27 @@
       right: 50rem;
     }
   }
+
+  &__right-list {
+    .num-anim {
+      display: inline;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+  }
+
+  &__left-content-video {
+    &:after {
+      transition: transform .5s ease;
+    }
+
+    &:hover {
+      &:after {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+  }
 }
 
 .contacts {

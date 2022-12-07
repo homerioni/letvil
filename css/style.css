@@ -9256,6 +9256,22 @@ input[type=number] {
   height: 70rem;
   right: 50rem;
 }
+.inblock__right-list .num-anim {
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+.inblock__left-content-video:after {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.inblock__left-content-video:hover:after {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
+}
 
 .contacts__item-n-link:hover:after {
   visibility: hidden;

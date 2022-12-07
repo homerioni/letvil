@@ -135,16 +135,14 @@ $(document).ready(function () {
     const init = (() => items.forEach(item => new CategoryItem(item)))();
 
     //Delivery calc anim
-    const calcOptions = {
-        strings: ['40 + 504', '544', '544 x 3', '1632', '1632 - 99%', 'Лучшая цена', 'Лучшая цена'],
-        typeSpeed: 80,
-        backDelay: 1000,
-        loop: true,
-        showCursor: false,
-    };
-
     if ($('.dio__calc-text-animate').length) {
-        const typed = new Typed('.dio__calc-text-animate', calcOptions);
+        const typedDioCalc = new Typed('.dio__calc-text-animate', {
+            strings: ['40 + 504', '544', '544 x 3', '1632', '1632 - 99%', 'Лучшая цена', 'Лучшая цена'],
+            typeSpeed: 80,
+            backDelay: 1000,
+            loop: true,
+            showCursor: false,
+        });
     }
 
     //section specification
@@ -152,6 +150,18 @@ $(document).ready(function () {
     $('.specification__btn').click(function () {
         $('.active-line').css('transform', 'translateY(50%) translateX('+ $(this).position().left +'px)')
             .animate({width: $(this).width()}, 200);
+    });
+
+    //Section inblock
+    $('.num-anim').each(function () {
+        let $this = $(this);
+        $({numberValue: 0}).animate({numberValue: Number($this.html())}, {
+            duration: 3000,
+            easing: "swing",
+            step: function(val) {
+                $this.html(Math.ceil(val));
+            }
+        });
     });
 
 });
