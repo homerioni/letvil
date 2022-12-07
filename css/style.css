@@ -8811,20 +8811,20 @@ input[type=number] {
   z-index: 5;
   -webkit-transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
           transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
-  -webkit-transition: -webkit-box-shadow 0.25s ease;
-  transition: -webkit-box-shadow 0.25s ease;
-  transition: box-shadow 0.25s ease;
-  transition: box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
+  -webkit-transition: -webkit-box-shadow 0.25s ease, -webkit-transform 0.05s ease;
+  transition: -webkit-box-shadow 0.25s ease, -webkit-transform 0.05s ease;
+  transition: box-shadow 0.25s ease, transform 0.05s ease;
+  transition: box-shadow 0.25s ease, transform 0.05s ease, -webkit-box-shadow 0.25s ease, -webkit-transform 0.05s ease;
   -webkit-box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
           box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
 }
 .catalog__item-wrap {
   width: 100%;
   margin: 0;
-  -webkit-transition: -webkit-transform 3s, -webkit-box-shadow 0.25s ease;
-  transition: -webkit-transform 3s, -webkit-box-shadow 0.25s ease;
-  transition: transform 3s, box-shadow 0.25s ease;
-  transition: transform 3s, box-shadow 0.25s ease, -webkit-transform 3s, -webkit-box-shadow 0.25s ease;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.25s ease;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.25s ease;
+  transition: transform 0.3s, box-shadow 0.25s ease;
+  transition: transform 0.3s, box-shadow 0.25s ease, -webkit-transform 0.3s, -webkit-box-shadow 0.25s ease;
 }
 .catalog__btns-btn {
   -webkit-box-shadow: 0 1.5rem 1.5rem -1rem rgba(34, 60, 80, 0);
@@ -8905,10 +8905,10 @@ input[type=number] {
   z-index: 5;
   -webkit-transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
           transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
-  -webkit-transition: -webkit-box-shadow 0.25s ease;
-  transition: -webkit-box-shadow 0.25s ease;
-  transition: box-shadow 0.25s ease;
-  transition: box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
+  -webkit-transition: -webkit-box-shadow 0.25s ease, -webkit-transform 0.05s ease;
+  transition: -webkit-box-shadow 0.25s ease, -webkit-transform 0.05s ease;
+  transition: box-shadow 0.25s ease, transform 0.05s ease;
+  transition: box-shadow 0.25s ease, transform 0.05s ease, -webkit-box-shadow 0.25s ease, -webkit-transform 0.05s ease;
   -webkit-box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
           box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
 }
@@ -9563,10 +9563,10 @@ input[type=number] {
   z-index: 5;
   -webkit-transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
           transform: rotateX(var(--mouseX)) rotateY(var(--mouseY));
-  -webkit-transition: -webkit-box-shadow 0.25s ease;
-  transition: -webkit-box-shadow 0.25s ease;
-  transition: box-shadow 0.25s ease;
-  transition: box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
+  -webkit-transition: -webkit-box-shadow 0.25s ease, -webkit-transform 0.05s ease;
+  transition: -webkit-box-shadow 0.25s ease, -webkit-transform 0.05s ease;
+  transition: box-shadow 0.25s ease, transform 0.05s ease;
+  transition: box-shadow 0.25s ease, transform 0.05s ease, -webkit-box-shadow 0.25s ease, -webkit-transform 0.05s ease;
   -webkit-box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
           box-shadow: 0 2rem 4rem rgba(23, 38, 47, 0.3), inset 0 0 0 1px #d7e5f4;
 }
