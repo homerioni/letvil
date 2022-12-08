@@ -9284,6 +9284,9 @@ input[type=number] {
   -webkit-animation: none;
           animation: none;
 }
+.inblock__about .inblock__img:before {
+  content: none;
+}
 .inblock__right-list .num-anim {
   display: inline;
   font-size: inherit;

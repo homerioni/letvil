@@ -862,6 +862,10 @@
       > img {
         animation: none;
       }
+
+      &:before {
+        content: none;
+      }
     }
   }
 
