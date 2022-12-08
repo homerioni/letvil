@@ -989,17 +989,16 @@
 
   &__add-calculator-img {
     transform-origin: bottom;
+    transition: transform .8s ease;
   }
 
   &__add-calculator {
     overflow: hidden;
 
-    > * {
-      transition: transform .8s ease;
-    }
-
-    &:hover > * {
-      transform: scale(1.1);
+    &:hover {
+      .dio__add-calculator-img {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -1200,5 +1199,33 @@
       transform: scale(1.1);
       transition: transform .5s ease;
     }
+  }
+}
+
+.sa {
+  &__item {
+    box-shadow: 0 -1rem 1.5rem -0.4rem rgba(34, 60, 80, 0);
+    transition: transform .4s ease, box-shadow .4s ease;
+    user-select: none;
+
+    &:hover {
+      transform: translateY(-0.4rem);
+      box-shadow: 0 1rem 1.5rem -0.4rem rgba(34, 60, 80, 0.3);
+
+      > .sa__item-img {
+        transform: scale(1.07);
+      }
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 -1.5rem 1.5rem -0.4rem rgba(34, 60, 80, 0);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+  }
+
+  &__item-img {
+    transform-origin: bottom;
+    transition: transform .4s ease;
   }
 }

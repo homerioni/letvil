@@ -9395,17 +9395,15 @@ input[type=number] {
 .dio__add-calculator-img {
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-}
-.dio__add-calculator {
-  overflow: hidden;
-}
-.dio__add-calculator > * {
   -webkit-transition: -webkit-transform 0.8s ease;
   transition: -webkit-transform 0.8s ease;
   transition: transform 0.8s ease;
   transition: transform 0.8s ease, -webkit-transform 0.8s ease;
 }
-.dio__add-calculator:hover > * {
+.dio__add-calculator {
+  overflow: hidden;
+}
+.dio__add-calculator:hover .dio__add-calculator-img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -9610,4 +9608,45 @@ input[type=number] {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.sa__item {
+  -webkit-box-shadow: 0 -1rem 1.5rem -0.4rem rgba(34, 60, 80, 0);
+          box-shadow: 0 -1rem 1.5rem -0.4rem rgba(34, 60, 80, 0);
+  -webkit-transition: -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
+  transition: -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.sa__item:hover {
+  -webkit-transform: translateY(-0.4rem);
+          transform: translateY(-0.4rem);
+  -webkit-box-shadow: 0 1rem 1.5rem -0.4rem rgba(34, 60, 80, 0.3);
+          box-shadow: 0 1rem 1.5rem -0.4rem rgba(34, 60, 80, 0.3);
+}
+.sa__item:hover > .sa__item-img {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+.sa__item:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-shadow: 0 -1.5rem 1.5rem -0.4rem rgba(34, 60, 80, 0);
+          box-shadow: 0 -1.5rem 1.5rem -0.4rem rgba(34, 60, 80, 0);
+  -webkit-transition: -webkit-transform 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: -webkit-transform 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, -webkit-transform 0.15s ease, -webkit-box-shadow 0.15s ease;
+}
+.sa__item-img {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
