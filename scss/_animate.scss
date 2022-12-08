@@ -858,6 +858,10 @@
       width: 55rem;
       height: 70rem;
       right: 50rem;
+
+      > img {
+        animation: none;
+      }
     }
   }
 

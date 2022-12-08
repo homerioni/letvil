@@ -9280,6 +9280,10 @@ input[type=number] {
   height: 70rem;
   right: 50rem;
 }
+.inblock__about .inblock__img > img {
+  -webkit-animation: none;
+          animation: none;
+}
 .inblock__right-list .num-anim {
   display: inline;
   font-size: inherit;
